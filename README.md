@@ -1,50 +1,217 @@
-# Welcome to your Expo app 👋
+# Smart Street Light Monitoring System
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A real-time IoT-based street light monitoring and fault management system built for technicians and maintenance teams.
 
-## Get started
+This system continuously monitors street lights using IoT hardware and automatically assigns fault-repair tasks to nearby technicians through a mobile application.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+# Overview
 
-2. Start the app
+Traditional street light maintenance is slow, manual, and inefficient. Fault detection often depends on public complaints or physical inspection.
 
-   ```bash
-   npx expo start
-   ```
+This project automates the entire workflow:
 
-In the output, you'll find options to open the app in a
+- Street lights continuously send live status data to the backend
+- Faults are detected automatically
+- Nearby technicians receive instant task notifications
+- Technicians can track assigned repair tasks directly from the mobile app
+- Task status updates automatically after repair completion
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+# Core Features
 
-## Get a fresh project
+## Real-Time Device Monitoring
 
-When you're ready, run:
+Every street light sends live device status data to the backend every second.
 
-```bash
-npm run reset-project
+Possible statuses:
+
+- Working
+- Fault Detected
+- Offline
+
+---
+
+## Automatic Fault Detection
+
+The system detects:
+
+- Device offline state
+- Electrical faults
+- Power/current abnormalities
+
+using voltage and current sensor data.
+
+---
+
+## Smart Technician Assignment
+
+When a fault is detected:
+
+- The nearest technician receives an instant notification
+- A repair task is automatically generated
+- The task appears inside the technician mobile application
+
+---
+
+## Technician Mobile App
+
+Technicians can:
+
+- View assigned repair tasks
+- Track faulty street light status
+- Visit the fault location
+- Complete repair operations
+- Automatically update task status after fixing the device
+
+---
+
+# Tech Stack
+
+## Mobile Application
+
+- React Native
+- Expo
+
+---
+
+## Backend
+
+- Express.js
+- MongoDB Atlas
+
+---
+
+## IoT Hardware
+
+- ESP8266
+- Voltage Sensor
+- Current Sensor
+
+---
+
+# System Workflow
+
+```txt
+Street Light Device
+        ↓
+ESP8266 sends live data
+        ↓
+Express.js Backend API
+        ↓
+MongoDB Atlas
+        ↓
+Fault Detection Engine
+        ↓
+Nearest Technician Notification
+        ↓
+Technician Mobile App
+        ↓
+Repair Completed
+        ↓
+Task Automatically Marked Done
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+# Screenshots
 
-To learn more about developing your project with Expo, look at the following resources:
+## Technician Dashboard
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+![Dashboard](screenshots/dashboard.png)
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## Assigned Tasks
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+![Tasks](assets/screenshots/completedTask.png)
+
+---
+
+## Fault Monitoring
+
+![Monitoring](screenshots/taskDetailModal.png)
+
+---
+
+# Folder Structure
+
+```txt
+project-root/
+│
+├── app/
+├── components/
+├── screens/
+├── backend/
+├── assets/
+│
+──screenshots/
+│
+├── package.json
+└── README.md
+```
+
+---
+
+# Objectives
+
+- Automate street light fault monitoring
+- Reduce manual inspection work
+- Improve repair response time
+- Enable smart city infrastructure
+- Provide real-time maintenance workflow
+
+---
+
+# Future Improvements
+
+- Admin Panel
+- Live GPS Tracking
+- AI-Based Fault Prediction
+- Energy Consumption Analytics
+- Technician Performance Dashboard
+- Real-Time Pole Location Mapping
+- Push Notification System
+- Maintenance History Logs
+
+---
+
+# Installation
+
+
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## Start Mobile App
+
+```bash
+npx expo start
+```
+
+---
+
+# Developer
+
+**Ubaid Shekh**  
+React Native Developer  
+Jamia Millia Islamia
+
+---
+
+# Project Status
+
+Currently under active development.
+
+---
+
+# License
+
+This project is developed for educational and smart city research purposes.
