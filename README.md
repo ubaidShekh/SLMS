@@ -120,19 +120,38 @@ Task Automatically Marked Done
 
 ## Technician Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshot/dashboard.jpeg)
 
 ---
 
 ## Assigned Tasks
 
-![Tasks](assets/screenshots/completedTask.png)
+![Tasks](assets/screenshot/completedTask.jpeg)
 
 ---
 
 ## Fault Monitoring
 
-![Monitoring](screenshots/taskDetailModal.png)
+![Monitoring](screenshot/taskDetailModal.jpeg)
+
+---
+
+
+## Login
+
+![Login](screenshot/login.jpeg)
+
+---
+
+## Fault Monitoring
+
+![Monitoring](screenshot/signup.jpeg)
+
+---
+
+## Fault Monitoring
+
+![Monitoring](screenshot/profile.jpeg)
 
 ---
 
